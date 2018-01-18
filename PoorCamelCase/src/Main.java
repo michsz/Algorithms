@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
@@ -9,6 +10,7 @@ public class Main {
         String sentence = sc.nextLine();
 
         char [] charsArray = sentence.toCharArray();
+
 
         for (int i = 0; i < charsArray.length; i++){
             if (i == 0 || i%2==0){
