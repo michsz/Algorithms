@@ -6,15 +6,17 @@ public class Main {
 
         System.out.print("Please type any word/sentence: ");
         Scanner sc = new Scanner(System.in);
-        String sentence = sc.nextLine();
+        String sentence = sc.nextLine().toLowerCase();
         String [] words = sentence.split("\\s+");
 
-        for (int i = 0; i<words.length; i++){
+        for (String word : words){
 
-            if (words[i].length() == 1)
-                System.out.print(words[i].toUpperCase());
+            if (word.length() == 1)
+                System.out.print(word.toUpperCase());
+            else if (word.length()==0)
+                System.out.print("");
             else
-                System.out.print(words[i].substring(0,1).toUpperCase() + words[i].substring(1));
+                System.out.print(word.substring(0,1).toUpperCase() + word.substring(1));
 
 
         }
